@@ -11,9 +11,10 @@ body{
 }
 .side_bar{
     width: 20%;
+    display: flex;
     /* background-color: blueviolet; */
     height: 90vh;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 .side_menu{
     padding: 20px;
@@ -28,8 +29,14 @@ body{
 .fa-solid{
     margin-right: 10px;
 }
+.border_right{
+    height: 100vh;
+    border-right: 1px solid rgb(87, 86, 86);
+}
 .img{
     display: flex;
+    flex-direction: column;
+    gap: 5px;
     justify-content: center;
     align-items: center;
 }
@@ -85,4 +92,40 @@ body{
 }
 .content {
     font-size: 1vw;
+}
+.brand_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.brand_img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+.brand_img .text{
+    display: flex;
+    flex-direction: column;
+}
+.brand{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.post_content{
+    margin-top: 1.5rem;
+}
+.post_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.post_img img{
+    object-fit: contain;
+    width: 80%;
+    height: 65vh;
+    border: 1px solid rgb(87, 86, 86);
+    margin-top: 5px;
+    border-radius: 1%;
 }
