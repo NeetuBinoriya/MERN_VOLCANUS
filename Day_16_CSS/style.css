@@ -1,0 +1,43 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+body{
+    background-color: black;
+    color: white;
+}
+.container{
+    background-color: yellow;
+    width: 100%;
+    height: 40vh;
+}
+.inline{
+    display: inline;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+}
+.inline-block{
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+}
+.img img{
+    height: 400px;
+    width: 400px;
+}
+.img{
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div ~ p{
+    background-color: yellow;
+    color: black;
+}
