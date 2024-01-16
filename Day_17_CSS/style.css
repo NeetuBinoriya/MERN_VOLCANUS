@@ -1,0 +1,56 @@
+
+/* UnVisited Link */
+/* a:link{
+    color: #1b1a1a;
+} */
+/* Visited Link */
+/* a:visited{
+    color: #00FF00;
+} */
+/* Mouse Over Link */
+/* a:hover{
+    color: #683668;
+} */
+/* Selected Link */
+/* a:active{
+    color: #0000FF;
+}x` */
+/* div{
+    height: 100px;
+    background-color: blue;
+}
+div p{
+    background-color: #00FF00;
+    display: none;
+}
+div:hover p{
+    display: block;
+}
+p:first-child{
+    background-color: yellow;
+} */
+/* p:nth-child(2){
+    background-color: red;
+} */
+/* div{
+    margin: 1rem;
+}
+input{
+    height: 50px;
+    width: 500px;
+    background-color: black;
+    color: white;
+}
+input::placeholder{
+    font-size: 1.5rem;
+    padding: 1rem;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+} */
+img{
+    height: 500px;
+    width: 500px;
+    opacity: 0.4;
+    
+}
