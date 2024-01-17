@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            /* background-color: rgb(22, 172, 222); */
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+        }
+        .item-list{
+            background-color: rgb(22, 172, 222);
+            margin: 5px;
+            color: #fff;
+            font-size: 4rem;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .item-list:nth-child(1){
+            /* grid-area: 3/1; */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }  
+         .item-list:nth-child(5){
+            /* grid-area: 3/1; */
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+        /* .item-list:nth-child(4){
+            
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 2;
+        } */
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item-list">1</div>
+        <div class="item-list">2</div>
+        <div class="item-list">3</div>
+        <div class="item-list">4</div>
+        <div class="item-list">5</div>
+        <div class="item-list">6</div>
+        <div class="item-list">7</div>
+    </div>
+    
+</body>
+</html>
