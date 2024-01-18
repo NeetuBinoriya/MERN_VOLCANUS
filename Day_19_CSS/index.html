@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        body{
+            background-color: black;
+            color: #fff;
+        }
+        .nav-bar{
+            display: flex;
+            gap: 2rem;
+            justify-content: flex-start;
+            align-items: center;
+            width: 3rem;
+            /* height: 4rem; */
+            /* background-color: aquamarine; */
+        }
+        .home{
+            color: #fff;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        .home:hover{
+            background-color: aqua;
+            color: black;
+            cursor: pointer;
+        }
+        .products{
+            color: #fff;
+            font-size: 20px;
+            font-weight: bolder;
+           display: block;
+           /* height: 10rem; */
+        }
+        .items{
+            display: none;
+            
+        }
+        .products:hover .items{
+            display:block;
+            cursor: pointer;
+            background-color: blueviolet;
+            
+        }
+        
+        .contact{
+            color: #fff;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="home">
+            Home
+        </div>
+        <div class="products">
+            Products
+            <div class="items">
+                SmartPhones
+            </div>
+            <div class="items">
+                Tablet
+            </div>
+            <div class="items">
+                Laptop
+            </div>
+            <div class="items">
+                Camera
+            </div>
+        </div>
+        
+        <div class="contact">
+            contact
+        </div>
+    </div>
+</body>
+</html>
