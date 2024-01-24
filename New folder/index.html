@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      .box {
+        position: relative;
+        height: 100px;
+        width: 100px;
+        background-color: orange;
+        animation-name: superman;
+        animation-duration: 2s;
+        /* animation-iteration-count: 5; */
+        animation-iteration-count: infinite;
+        border-width: 50px;
+        border-radius: 100%;
+        border-style: solid;
+        border-color: white;
+        /* animation-direction: reverse; */
+        animation-direction: alternate;
+        animation-delay: 4s;
+      }
+      @keyframes superman {
+        /* from {
+          background-color: orange;
+        } */
+        /* to {
+          background-color: aqua;
+          height: 200px;
+          width: 200px;
+        } */
+        0%{
+            background-color: aquamarine;
+            top: 0px;
+            left: 0px;
+        }
+        25%{
+            border-radius: 0%;
+            border-color: rgb(224, 34, 34);
+            left: 400px;
+            top: 0px;
+            background-color: blueviolet;
+        }
+        50%{
+            border-color: rgb(80, 233, 42);
+            background-color: cadetblue;
+            top: 400px;
+            border-radius: 100%;
+            left: 400px;
+        }
+        75%{
+            border-radius: 0%;
+            border-color: rgb(42, 16, 208);
+            background-color: white;
+            left: 0px;
+            top: 400px;
+        }
+        100%{
+            border-radius: 100%;
+            border-color: rgb(215, 6, 180);
+            background-color: magenta;
+            left: 0px;
+            top: 0px;
+        }
+
+      }
+      .box1{
+        border: 10px solid yellow;
+        height: 100px;
+        width: 500px;
+      }
+      .box2{
+        border: 10px solid yellow;
+        height: 100px;
+        width: 500px;
+        padding: 80px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box"></div> -->
+    <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis repellat aliquam temporibus similique quod vel saepe sequi tempore voluptates voluptatum?</div> <br><br>
+    <div class="box2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia officiis, sapiente natus magnam odio quos numquam excepturi beatae tenetur quis pariatur, amet dignissimos sequi totam ex. Veritatis est harum repudiandae?</div>
+  </body>
+</html>
