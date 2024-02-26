@@ -30,7 +30,7 @@ let arr = [10,20,30,40]
 
 console.log("Original Array..",arr)
 // arr.push("Apple", "Superman") //Will add one or more new element in last of the array
-// arr.pop() //will remove last element from the last of the array
+arr.pop() //will remove last element from the last of the array
 // console.log("Pop Element", arr.pop())
 
 // console.log("Removing Shift Element",arr.shift()) //Will Remove Element from First

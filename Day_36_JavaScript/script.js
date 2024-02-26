@@ -73,19 +73,19 @@ const products = [
   },
 ];
 
-// const filterSearch = "mobiles";
+const filterSearch = "mobiles";
 
-// const filtereByCategory = products.filter(
-//   (product) => product.category.toLowerCase() == filterSearch.toLowerCase()
-// );
+const filtereByCategory = products.filter(
+  (product) => product.category.toLowerCase() == filterSearch.toLowerCase()
+);
 
-// console.log(filtereByCategory);
+console.log(filtereByCategory);
 
 // const filterByPrice = products.filter((data)=>data.price>=99999)
 
 // console.log(filterByPrice)
 
 
-const filterByTitle = products.filter((data)=>data.title.toLowerCase().includes("i"))
+// const filterByTitle = products.filter((data)=>data.title.toLowerCase().includes("i"))
 
-console.log(filterByTitle);
+// console.log(filterByTitle);
