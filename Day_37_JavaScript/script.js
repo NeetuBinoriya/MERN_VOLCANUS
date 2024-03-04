@@ -1,4 +1,4 @@
-// // **** String Method*******
+// **** String Method*******
 // //****toUpperCase() Method*******
 // // const str = "Superman"
 // // const resutlStr = str.toUpperCase()
