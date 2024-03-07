@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data</title>
+  </head>
+  <style>
+  body{
+    background-color: black;
+    color: white;
+  }
+</style>
+  <body>
+    <div class="fetch"></div>
+
+    <script>
+    const fetchDataUsingPromise = () =>{
+      return new Promise((resolve, reject) =>{
+        fetch("https://jsonplaceholder.typicode.com/todos").then((res)=>{
+          if(!res.ok){
+            reject("The error Occure")
+          }
+          resolve(res.json());
+        }).catch((err) =>{
+         reject("The Error Occure")
+        })
+      })
+    }
+
+
+    fetchDataUsingPromise().then((data) =>console.log("This data is Coming from My promise",data)).catch((err) => console.log(err));
+  </script>
+  </body>
+</html>
