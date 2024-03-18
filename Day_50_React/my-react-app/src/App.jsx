@@ -1,9 +1,14 @@
+import React from 'react';
+import Hero from './Hero';
+import Laptop from './Laptop';
+
 const App = () => {
   return (
     <div>
-      <h1>Hello React</h1>
+      <Hero/>
+      <Laptop/>
     </div>
-  )
+  );
 }
 
 export default App;
