@@ -52,7 +52,7 @@ const showDataToDOM = async () =>{
 document.querySelector('.main').innerHTML = data.map((d)=>
     `<div>
 <h1> ${d.strMeal} ${d.idMeal}</h1>    
-<img src=${d.strMealThumb} alt=${d.strMeal} style="width:300px" />
+<img src=${d.strMealThumb} alt=${d.strMeal} style="display:flex" "flex:wrap"  />
 </div>`
 )
 };
