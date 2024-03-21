@@ -6,9 +6,10 @@ import Tablet from './Tablet';
 import Person from './component/Person';
 import Phone from './component/Phone'
 import { useState } from 'react';
+import Products from './component/Products';
 
 const App = () => {
-  const [counter, setCounter] = useState(10)
+ {/* const [counter, setCounter] = useState(10)
 
 
   const increaseBy1 =() =>{
@@ -29,13 +30,13 @@ const App = () => {
   const dark = () => {
     document.querySelector("body").style.backgroundColor = 'black'
     document.querySelector("body").style.color = 'white'
-  }
+  }*/}
   return (
     <div>
 
-    <button onClick={()=>setCounter(counter+1)}> Increase</button>
+{/*  <button onClick={()=>setCounter(counter+1)}> Increase</button>
     <button onClick={()=>setCounter(counter-1)}>Decrease</button>
-      <Phone ram={"10gb"} name={"Pocco"} price={"5000"} light={light} dark={dark} counter= {counter} increase={increaseBy1} decrease={decreaseBy1}/>
+  <Phone ram={"10gb"} name={"Pocco"} price={"5000"} light={light} dark={dark} counter= {counter} increase={increaseBy1} decrease={decreaseBy1}/>*/}
       {/*<Person name={"Superman"}/>
     <Person name={"Spiderman"}/>
   <Person name={"Batman"}/>*/}
@@ -46,6 +47,7 @@ const App = () => {
       <Hero/>
       <Laptop/>
     */}
+    <Products/>
     </div>
   );
 }
