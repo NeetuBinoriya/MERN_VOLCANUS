@@ -9,9 +9,9 @@ const FormHandling = () => {
   const [email2, setemail2] = useState("")
   const [password2, setpassword2] = useState("")
 
-  const [flag, setflag] =useState(false);
+  const [flag, setflag] = useState(false);
   // console.log(name,email,password);
-  const onSubmitHandler = (e) =>{
+  const onSubmitHandler = (e) => {
     e.preventDefault()
     // Backend Logic here
     alert("Your form has been submitted")
@@ -41,10 +41,10 @@ const FormHandling = () => {
       </form>
       {flag && (
         <>
-        <h1>Name = {name2}</h1>
-        <h1>Email = {email2}</h1>
-        <h1>Password = {password2}</h1>
-        
+          <h1>Name = {name2}</h1>
+          <h1>Email = {email2}</h1>
+          <h1>Password = {password2}</h1>
+
         </>
       )}
     </>
