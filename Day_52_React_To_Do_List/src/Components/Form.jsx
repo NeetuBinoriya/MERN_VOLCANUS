@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
-const Form = ({ addToDo }) => {
-    const [title, settitle] = useState("")
-    const [description, setdescription] = useState("")
+const Form = ({ addToDo, id, setId, data }) => {
+    const [title, setTitle] = useState("")
+    const [description, setDescription] = useState("")
     // console.log(title);
     // console.log(description);
+useEffect(()=>{
+    const editedData = data.filter((d)=>d.id == id)
+    console.log("Edited data From useEffect",editedData);
+    setTitle(editedData[0]?.title)
+    setDescription(editedData[0]?.description)
+},[id])
+
     const onSubmitHandler = (e) => {
         e.preventDefault();
         if(title == "" || description == ""){
@@ -15,8 +22,8 @@ const Form = ({ addToDo }) => {
 
             addToDo(title, description);
             alert("Your Data Added Successfully..!")
-            settitle("")
-            setdescription("")
+            setTitle("")
+            setDescription("")
         }
     };
     return (
@@ -25,11 +32,11 @@ const Form = ({ addToDo }) => {
                 <form className='row d-flex justify-content-center align-item-center p-3' onSubmit={onSubmitHandler}>
                     <div className="mb-3 col-md-5">
 
-                        <input value={title} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e) => settitle(e.target.value)}/>
+                        <input value={title} type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e) => setTitle(e.target.value)}/>
                     </div>
                     <div className="mb-3 col-md-5">
 
-                        <input value={description} type="text" className="form-control" id="exampleInputPassword1" onChange={(e) => setdescription(e.target.value)}/>
+                        <input value={description} type="text" className="form-control" id="exampleInputPassword1" onChange={(e) => setDescription(e.target.value)}/>
                     </div>
                     <div className="mb-3 col-md-2">
                         <button className="btn btn-primary">Add</button></div>
