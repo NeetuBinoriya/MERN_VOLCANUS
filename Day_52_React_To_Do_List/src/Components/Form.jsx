@@ -8,7 +8,7 @@ const Form = ({ addToDo, id, setId, data, setData, setReload }) => {
     // console.log(description);
     useEffect(() => {
         const editedData = data.filter((d) => d.id == id)
-        console.log("Edited data From useEffect", editedData);
+        // console.log("Edited data From useEffect", editedData);
         setTitle(editedData[0]?.title)
         setDescription(editedData[0]?.description)
     }, [id])
