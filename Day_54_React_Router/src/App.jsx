@@ -6,6 +6,7 @@ import Contact from './Pages/Contact';
 import Team from './Pages/Team';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import ProductDetails from './Pages/ProductDetails';
 
 const App = () => {
   return (
@@ -16,8 +17,12 @@ const App = () => {
         <Route path='/about' element={<About />}/>
         <Route path='/contact' element={<Contact />}/>
         <Route path='/team' element={<Team />}/>
+        
+        {/* Dynamic Route */}
+        <Route path='/product/:id' element={<ProductDetails/>}/>
+
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </Router>
   );
 }

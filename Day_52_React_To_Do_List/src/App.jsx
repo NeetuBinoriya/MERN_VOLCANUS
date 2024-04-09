@@ -33,7 +33,7 @@ const App = () => {
     setData([...data, obj])
     setReload(true)
   };
-  // Delete ToDo
+  // Delete To Do
   const deleteTodo = (id) => {
     const filteredData = data.filter((d) => d.id != id)
     setData(filteredData)

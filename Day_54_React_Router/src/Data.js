@@ -1,4 +1,4 @@
- const items =  [
+ export const items =  [
     {
       id: 1,
       category: 'mobiles',
@@ -81,4 +81,4 @@
       price: '89999',
     },
   ]
-  export default Data;
+  

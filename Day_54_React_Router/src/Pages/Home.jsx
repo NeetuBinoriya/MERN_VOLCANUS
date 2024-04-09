@@ -1,9 +1,12 @@
 import React from 'react';
+import Product from '../Components/Product';
+import {items} from "../Data"
 
 const Home = () => {
   return (
     <>
-     This is Home Page 
+    <Product product={items}/>
+   
     </>
   );
 }
