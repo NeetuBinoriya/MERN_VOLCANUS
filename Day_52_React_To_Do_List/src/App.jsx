@@ -4,8 +4,8 @@ import Form from './Components/Form';
 
 const App = () => {
   const [data, setData] = useState([]);
-  const [reload, setReload] = useState(false)
-  const [id, setId] = useState("")
+  const [reload, setReload] = useState(false);
+  const [id, setId] = useState("");
 
   useEffect(() => {
     if (reload) {

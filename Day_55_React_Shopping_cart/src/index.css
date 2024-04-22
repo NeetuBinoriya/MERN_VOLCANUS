@@ -1,5 +1,6 @@
 body{
   overflow-x: hidden;
+  background-color: black;
 }
 .nav{
   display: flex;
@@ -23,4 +24,19 @@ body{
 .nav .search input::placeholder{
   font-weight: bold;
   padding: 5px;
+}
+.sub_bar{
+  background-color: rgb(57, 17 , 94);
+}
+.sub_bar .items{
+  padding: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.sub_bar .items:hover{
+  background-color: black;
+}
+.nav .brand{
+  text-decoration: none;
+  color: white;
 }

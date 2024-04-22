@@ -5,7 +5,7 @@ const ShowData = ({data}) => {
   return (
     <>
       <div className="container" style={{ width: "67rem", margin: "auto"}}>
-      {data.map((d)=>(
+      {data.map((d) => (
         
         <div key={d.id}>
         <h5>{d.id}</h5>
