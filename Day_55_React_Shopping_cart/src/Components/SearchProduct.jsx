@@ -1,33 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { data } from '../Data';
 import Product from './Product';
+import ProductContext from '../context/ProductContext';
 
-const SearchProduct = ({setProducts}) => {
+const SearchProduct = () => {
+  const { setProducts } = useContext(ProductContext)
   const { term } = useParams();
   const [searchData, setSearchData] = useState([])
   useEffect(() => {
     setSearchData(data.filter((d) => d.title.toLowerCase().includes(term.toLowerCase())
     )
     );
-    if(searchData.length == 0){
+    if (searchData.length == 0) {
       setProducts(data)
     }
-
     // console.log(searchData);
   }, [term])
 
   return (
     <>
-    {searchData.length == 0 ? (<>
-      <div className='container text-center my-5'>
-        <h1>No Product Found</h1>
-        <Link to={"/"} className="btn btn-warning">Continue Shopping</Link>
-      </div>
-    </>) :(
+      {searchData.length == 0 ? (<>
+        <div className='container text-center my-5'>
+          <h1>No Product Found</h1>
+          <Link to={"/"} className="btn btn-warning">Continue Shopping</Link>
+        </div>
+      </>) : (
 
-      <Product products={searchData}/>
-    ) }
+        <Product products={searchData} />
+      )}
     </>
   );
 }

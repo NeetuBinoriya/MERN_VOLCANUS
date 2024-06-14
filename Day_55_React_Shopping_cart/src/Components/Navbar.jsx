@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaCartPlus } from "react-icons/fa";
 import { data } from '../Data';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import ProductContext from '../context/ProductContext';
 
 
-const Navbar = ({ setProducts, cart }) => {
+const Navbar = () => {
+  const {setProducts, cart} = useContext(ProductContext)
+
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("")
   const location = useLocation();
