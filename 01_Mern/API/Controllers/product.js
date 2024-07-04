@@ -12,8 +12,9 @@ export const addProduct = async (req, res) => {
             qty,
             imgsrc,
             category,
+            userId: req.user
         });
-        res.json({ messgae: "Your Product has been Added", success: true, product })
+        res.json({ message: "Your Product has been Added", success: true, product })
     } catch (error) {
         res.json({ message: error.message, success: false })
     }
@@ -39,6 +40,22 @@ export const getProductById = async (req, res) => {
         res.json({ message: "Product by Id:", product })
 
     } catch (error) {
+        res.json({ message: error.message, success: false })
+    }
+}
+//Get Product by User ID
+export const getProductByUserId = async (req, res) => {
+    const id = req.user._id;
+    // console.log("User ID", id.toString());
+    try {
+        let product = await Products.find({ userId: id.toString() });
+
+        if (!product) return res.json({ message: "invalid User ID", success: false });
+
+        res.json({ message: "Product by user id", product, success: true })
+
+    } catch (error) {
+
         res.json({ message: error.message, success: false })
     }
 }

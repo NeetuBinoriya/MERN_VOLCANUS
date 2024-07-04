@@ -2,10 +2,13 @@ import express from 'express'
 import mongoose from 'mongoose'
 import bodyParser from 'express'
 import productRouter from './Routes/product.js'
+import userRouter from './Routes/user.js';
 import cors from 'cors'
+import { config } from 'dotenv';
 
 
 const app = express();
+config({path:'.env'})
 
 app.use(bodyParser.json())
 
@@ -15,14 +18,19 @@ app.use(cors({
     credentials:true
 }))
 
+//user router
+app.use('/api/user', userRouter);
+
+
+
 // product Router
-app.use('/api/product', productRouter)
+app.use('/api/product', productRouter) 
 
 
 //get => browser
 //post, put, delete => frontend or frontend client
 
-mongoose.connect("mongodb+srv://neetubinoriya:uJ7F3ktvWTDY6Nqo@cluster0.cv2bxwy.mongodb.net/", {
+mongoose.connect( process.env.Mongo_URI,{
     dbName:
         "Volcanus_MERN_E_Commerce"
 

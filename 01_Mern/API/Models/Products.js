@@ -7,7 +7,12 @@ const productSchema = new mongoose.Schema({
     qty: { type: Number, require: true },
     imgsrc: { type: String, require: true },
     category: { type: String, require: true },
-    createdAt: { type: Date, default:Date.now },
+    createdAt: { type: Date, default: Date.now },
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
+    },
 });
 
-export const Products = mongoose.model('Product',productSchema)
+export const Products = mongoose.model('Product', productSchema)
